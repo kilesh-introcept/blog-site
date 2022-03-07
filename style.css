@@ -122,7 +122,7 @@ h1 {
 }
 
 .section-nav-link {
-  padding-bottom: 0.75rem;
+  height: 2rem;
 }
 .section-nav-link:hover {
   color: var(--clr-ascent-green);
@@ -235,11 +235,28 @@ h1 {
 }
 
 .articles-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 37rem));
-  grid-template-rows: masonry;
-  gap: 4rem;
-  justify-content: space-between;
+  display: column;
+  columns: 1;
+  column-gap: 4em;
+}
+
+.articles-container > * {
+  break-inside: avoid;
+  margin-bottom: 4em;
+}
+@supports (grid-template-rows: masonry) {
+  .articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 37rem));
+    grid-template-rows: masonry;
+    grid-auto-flow: dense;
+    justify-content: space-between;
+    gap: 3rem;
+    column-gap: 0;
+  }
+  .articles-container > * {
+    margin-bottom: 0;
+  }
 }
 
 .article {

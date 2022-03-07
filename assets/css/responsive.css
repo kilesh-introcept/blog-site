@@ -33,6 +33,10 @@
     column-gap: 4em;
   }
 
+  .article-link {
+    font-size: calc(100% + 0.2vw);
+  }
+
   .post-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

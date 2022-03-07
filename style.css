@@ -29,9 +29,18 @@ ul {
 }
 a {
   text-decoration: none;
+  color: unset;
 }
 button {
   outline: none;
+}
+
+input {
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--clr-secondary);
+  padding: 0.7rem;
+  width: 100%;
 }
 
 h1 {
@@ -43,13 +52,22 @@ h1 {
 }
 
 .btn {
-  background: var(--clr-ascent-green);
-  color: #fff;
   border: none;
   padding: 0.7rem 1rem;
   border-radius: 5px;
   cursor: pointer;
   font-size: var(--default-font-size);
+}
+
+.btn-primary {
+  background: var(--clr-ascent-green);
+  color: #fff;
+}
+
+.btn-outline {
+  border: 2px solid var(--clr-ascent-green);
+  background: none;
+  color: var(--clr-ascent-green);
 }
 
 .login-btn {
@@ -113,6 +131,11 @@ h1 {
   color: var(--clr-ascent-green);
   border-bottom: 2px solid var(--clr-ascent-green);
 }
+.section-nav-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .section-nav-search input {
   border: none;
   padding: 0.5rem;
@@ -122,7 +145,7 @@ h1 {
 }
 
 .section-nav-link {
-  padding-bottom: 0.75rem;
+  height: 2rem;
 }
 .section-nav-link:hover {
   color: var(--clr-ascent-green);
@@ -235,11 +258,28 @@ h1 {
 }
 
 .articles-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 37rem));
-  grid-template-rows: masonry;
-  gap: 4rem;
-  justify-content: space-between;
+  display: column;
+  columns: 1;
+  column-gap: 4em;
+}
+
+.articles-container > * {
+  break-inside: avoid;
+  margin-bottom: 4em;
+}
+@supports (grid-template-rows: masonry) {
+  .articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 37rem));
+    grid-template-rows: masonry;
+    grid-auto-flow: dense;
+    justify-content: space-between;
+    gap: 3rem;
+    column-gap: 0;
+  }
+  .articles-container > * {
+    margin-bottom: 0;
+  }
 }
 
 .article {
@@ -262,3 +302,27 @@ h1 {
 }
 
 /* end of article-section */
+
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+.post {
+  grid-column: span 3 / span 3;
+}
+
+/* newsletter */
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--clr-secondary);
+}
+
+.newsletter-form input {
+  margin-bottom: 1rem;
+}
+
+/* end of newsletter */

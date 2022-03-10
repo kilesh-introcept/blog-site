@@ -44,7 +44,13 @@ input {
 }
 
 h1 {
-  font-size: calc(100% + 1.5vw);
+  font-size: calc(100% + 1.3vw);
+  color: var(--clr-primary);
+}
+
+form {
+  display: grid;
+  gap: 1em;
 }
 
 .container {
@@ -70,11 +76,15 @@ h1 {
   color: var(--clr-ascent-green);
 }
 
-.login-btn {
+.btn-secondary {
   border: none;
   color: var(--clr-primary);
   font-weight: bold;
   background: unset;
+}
+
+.btn-secondary:hover {
+  color: var(--clr-ascent-green);
 }
 
 /* navbar */
@@ -110,8 +120,39 @@ h1 {
   column-gap: 2rem;
 }
 
+.nav-link {
+  cursor: pointer;
+}
+
 .menu {
   display: block;
+}
+
+.mobile-nav {
+  display: none;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.mobile-nav-links > .nav-link {
+  width: 100%;
+  text-align: center;
+  color: var(--clr-ascent-green);
+}
+
+.mobile-nav-links > .nav-link:hover {
+  background: var(--clr-ascent-green);
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.3em 0.5em;
 }
 
 .auth {
@@ -155,6 +196,12 @@ h1 {
   font-size: var(--default-font-size);
   color: var(--clr-secondary);
   outline: none;
+  width: 4.1em;
+}
+
+.section-nav-search input:focus {
+  width: 10em;
+  transition: 300ms ease-in-out;
 }
 
 .section-nav-link {
@@ -171,7 +218,7 @@ h1 {
 .main-section {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: calc(100% + 3.5rem);
   margin-bottom: 4rem;
 }
 
@@ -194,10 +241,10 @@ h1 {
 .top-section {
   display: flex;
   flex-direction: column-reverse;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
   /* display: grid;
   grid-template-columns: repeat(autofit, minmax(0, 1fr)); */
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .top-section p {
@@ -229,6 +276,9 @@ h1 {
 }
 .rectangle-box-left {
   grid-column: span 2 / span 2;
+}
+.rectangle-box h1 {
+  color: #fff;
 }
 .rectangle-box-left h1::after {
   content: "";
@@ -339,3 +389,16 @@ h1 {
 }
 
 /* end of newsletter */
+
+/* Auth */
+.auth-container {
+  background: #eceff5;
+  padding: 1em;
+  border-radius: 0.5rem;
+  margin: auto;
+  max-width: 30rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* end of Auth */

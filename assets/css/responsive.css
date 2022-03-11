@@ -17,6 +17,10 @@
     align-items: center;
   }
 
+  .mobile-nav {
+    display: none;
+  }
+
   .section-nav {
     display: flex;
   }
@@ -24,7 +28,7 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
   }
 
   .articles-container {
@@ -41,5 +45,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
+  }
+  .post {
+    margin: 0 4rem;
   }
 }

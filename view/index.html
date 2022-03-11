@@ -22,19 +22,26 @@
           <div class="logo-txt">segment</div>
         </div>
         <ul class="nav-links">
-          <li>Products</li>
-          <li>Pricing</li>
-          <li>Docs</li>
-          <li>Company</li>
+          <li class="nav-link">Products</li>
+          <li class="nav-link">Pricing</li>
+          <li class="nav-link">Docs</li>
+          <li class="nav-link">Company</li>
         </ul>
-        <div class="auth">
-          <button class="btn login-btn">Log in</button>
-          <button class="btn btn-primary">Sign up</button>
-        </div>
-        <div class="menu">
-          <i class="fa-solid fa-bars"></i>
+        <div class="auth" id="auth"></div>
+        <div class="menu" id="open-menu">
+          <a onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </a>
         </div>
       </nav>
+      <div class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-nav-links">
+          <li class="nav-link">Products</li>
+          <li class="nav-link">Pricing</li>
+          <li class="nav-link">Docs</li>
+          <li class="nav-link">Company</li>
+        </ul>
+      </div>
 
       <section class="main-section">
         <nav class="section-nav">
@@ -93,92 +100,25 @@
               <i class="fa-solid fa-arrow-right-long"></i
             ></span>
           </div>
-          <div class="articles-container">
-            <div class="article">
-              <div style="height: 200px" class="rectangle-box"></div>
-              <div class="article-title">When AWS auto scale Doesn't 1</div>
-              <div class="article-author">
-                <img src="/assets/images/profile1.jpg" alt="user1" />
-                <span>Nicole Nearhood on september 8th 2020</span>
-              </div>
-              <div class="article-excerpt">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Excepturi unde deserunt, dignissimos veniam est minus? Cumque
-                molestias, ipsum officiis eveniet vel nisi aliquid repellat
-                sapiente alias iure velit, quia deserunt?
-              </div>
-            </div>
-            <div class="article">
-              <div class="article-title">When AWS auto scale Doesn't 2</div>
-              <div class="article-author">
-                <img src="/assets/images/profile5.jpg" alt="user1" />
-                <span>Nicole Nearhood on september 8th 2020</span>
-              </div>
-              <div class="article-excerpt">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Excepturi unde deserunt, dignissimos veniam est minus? Cumque
-                molestias, ipsum officiis eveniet vel nisi aliquid repellat
-                sapiente alias iure velit, quia deserunt?
-              </div>
-            </div>
-            <div class="article">
-              <div class="article-title">When AWS auto scale Doesn't 3</div>
-              <div class="article-author">
-                <img src="/assets/images/profile3.jpg" alt="user1" />
-                <span>Nicole Nearhood on september 8th 2020</span>
-              </div>
-              <div class="article-excerpt">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Excepturi unde deserunt, dignissimos veniam est minus? Cumque
-                molestias, ipsum officiis eveniet vel nisi aliquid repellat
-                sapiente alias iure velit, quia deserunt?
-              </div>
-            </div>
-            <div class="article">
-              <div class="article-title">When AWS auto scale Doesn't 4</div>
-              <div class="article-author">
-                <img src="/assets/images/profile1.jpg" alt="user1" />
-                <span>Nicole Nearhood on september 8th 2020</span>
-              </div>
-              <div class="article-excerpt">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Excepturi unde deserunt, dignissimos veniam est minus? Cumque
-                molestias, ipsum officiis eveniet vel nisi aliquid repellat
-                sapiente alias iure velit, quia deserunt?
-              </div>
-            </div>
 
-            <div class="article">
-              <div style="height: 200px" class="rectangle-box"></div>
-              <div class="article-title">When AWS auto scale Doesn't 5</div>
-              <div class="article-author">
-                <img src="/assets/images/profile1.jpg" alt="user1" />
-                <span>Nicole Nearhood on september 8th 2020</span>
-              </div>
-              <div class="article-excerpt">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Excepturi unde deserunt, dignissimos veniam est minus? Cumque
-                molestias, ipsum officiis eveniet vel nisi aliquid repellat
-                sapiente alias iure velit, quia deserunt?
-              </div>
-            </div>
-
-            <div class="article">
-              <div class="article-title">When AWS auto scale Doesn't 6</div>
-              <div class="article-author">
-                <img src="/assets/images/profile1.jpg" alt="user1" />
-                <span>Nicole Nearhood on september 8th 2020</span>
-              </div>
-              <div class="article-excerpt">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Excepturi unde deserunt, dignissimos veniam est minus? Cumque
-                molestias, ipsum officiis eveniet vel nisi aliquid repellat
-                sapiente alias iure velit, quia deserunt?
-              </div>
-            </div>
-          </div>
+          <div class="articles-container"></div>
         </section>
       </section>
     </div>
+    <script type="text/javascript" src="/js/script.js"></script>
+    <script>
+      const user = JSON.parse(localStorage.getItem("user"));
+      user
+        ? (document.getElementById("auth").innerHTML = `
+          <span>${user?.name}</span>
+          <button class = "btn btn-primary" onclick="logout()">Logout</button>
+          `)
+        : (document.getElementById("auth").innerHTML = `
+        <a href="/view/auth.html"><button class="btn btn-secondary">Log in</button></a>
+        <button class="btn btn-primary">Sign up</button>
+        `);
+    </script>
+    <script type="text/javascript" src="/js/auth.js"></script>
+    <script type="text/javascript" src="/js/blogs.js"></script>
   </body>
 </html>

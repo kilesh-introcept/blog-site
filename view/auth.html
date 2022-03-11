@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <title>Auth</title>
+  </head>
+  <body>
+    <div class="auth-container">
+      <h1>Login</h1>
+      <form>
+        <div>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div>
+          <input
+            type="button"
+            class="btn btn-primary"
+            onClick="login()"
+            value="login"
+          />
+        </div>
+      </form>
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/auth.js"></script>
+  </body>
+</html>

@@ -14,7 +14,8 @@
     "user": {
       "name": "Nicole Nearhood",
       "img": "/assets/images/profile1.jpg"
-    }
+    },
+    "img": false
   },
   {
     "title": "When AWS auto scale Doesn't 3",
@@ -30,7 +31,8 @@
     "user": {
       "name": "John Doe",
       "img": "/assets/images/profile1.jpg"
-    }
+    },
+    "img": false
   },
   {
     "title": "When AWS auto scale Doesn't 2",
@@ -38,7 +40,8 @@
     "user": {
       "name": "John Doe",
       "img": "/assets/images/profile3.jpg"
-    }
+    },
+    "img": false
   },
   {
     "title": "When AWS auto scale Doesn't 3",
@@ -46,6 +49,7 @@
     "user": {
       "name": "John Doe",
       "img": "/assets/images/profile1.jpg"
-    }
+    },
+    "img": false
   }
 ]

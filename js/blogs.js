@@ -1,11 +1,17 @@
 const data = fetch("./data.json")
   .then((response) => response.json())
-  .then(function (data) {
-    const blogTemplate = data.map(
+  .then((data) => {
+    let blogs = data;
+    const blogTemplate = blogs.map(
       (blog) =>
         `
                   <div class="article">
-                  <div style="height: 200px" class="rectangle-box"></div>
+                  ${
+                    blog.img
+                      ? `<div style="height: 200px" class="rectangle-box"/></div>`
+                      : ``
+                  }
+                  
                     <div class="article-title">${blog.title}</div>
                     <div class="article-author">
                       <img src=${blog.user?.img} alt="user1" />

@@ -1,10 +1,12 @@
-const data = fetch("./data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    let blogs = data;
-    const blogTemplate = blogs.map(
-      (blog) =>
-        `
+const fetchData = async () => {
+  fetch("./data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      let blogs = data;
+      const blogTemplate = blogs
+        .map(
+          (blog) =>
+            `
                   <div class="article">
                   ${
                     blog.img
@@ -22,8 +24,11 @@ const data = fetch("./data.json")
                     </div>
                   </div>
       `
-    );
+        )
+        .join("");
+      document.querySelector(".articles-container").innerHTML = blogTemplate;
+    })
+    .catch((error) => console.log(error));
+};
 
-    document.querySelector(".articles-container").innerHTML = blogTemplate;
-  })
-  .catch((error) => console.log(error));
+window.onload = fetchData;

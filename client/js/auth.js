@@ -12,7 +12,7 @@ const users = [
 ];
 
 const handleLogin = (user) => {
-  window.location.href = "http://127.0.0.1:5501/view/";
+  window.location.href = "http://127.0.0.1:5500/client/view/";
   localStorage.setItem("user", JSON.stringify(user));
 };
 
@@ -29,5 +29,5 @@ function login() {
 
 function logout() {
   localStorage.removeItem("user");
-  window.location.href = "http://127.0.0.1:5501/view/";
+  window.location.href = "http://127.0.0.1:5500/client/view/";
 }

@@ -17,7 +17,7 @@
       <nav class="navBar">
         <div class="logo">
           <div class="logo-icon">
-            <img src="/assets/images/segment.png" alt="" height="40px" />
+            <img src="../assets//images/segment.png" alt="" height="40px" />
           </div>
           <div class="logo-txt">segment</div>
         </div>
@@ -65,7 +65,7 @@
               How to start using advanced analytics
             </h1>
             <div class="article-author">
-              <img src="/assets/images/profile1.jpg" alt="user1" />
+              <img src="../assets/images/profile1.jpg" alt="user1" />
               <span>Nicole Nearhood on september 8th 2020</span>
             </div>
             <p>
@@ -105,7 +105,7 @@
         </section>
       </section>
     </div>
-    <script type="text/javascript" src="/js/script.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
     <script>
       const user = JSON.parse(localStorage.getItem("user"));
       user
@@ -114,11 +114,11 @@
           <button class = "btn btn-primary" onclick="logout()">Logout</button>
           `)
         : (document.getElementById("auth").innerHTML = `
-        <a href="/view/auth.html"><button class="btn btn-secondary">Log in</button></a>
+        <a href="./auth.html"><button class="btn btn-secondary">Log in</button></a>
         <button class="btn btn-primary">Sign up</button>
         `);
     </script>
-    <script type="text/javascript" src="/js/auth.js"></script>
-    <script type="text/javascript" src="/js/blogs.js"></script>
+    <script type="text/javascript" src="../js/auth.js"></script>
+    <script type="text/javascript" src="../js/blogs.js"></script>
   </body>
 </html>

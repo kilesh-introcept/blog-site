@@ -4,7 +4,7 @@
     "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi unde deserunt, dignissimos veniam est minus? Cumquemolestias, ipsum officiis eveniet vel nisi aliquid repellatsapiente alias iure velit, quia deserunt?",
     "user": {
       "name": "Nicole Nearhood",
-      "img": "/assets/images/profile1.jpg"
+      "img": "../assets/images/profile1.jpg"
     },
     "img": true
   },
@@ -13,7 +13,7 @@
     "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi unde deserunt, dignissimos veniam est minus? Cumquemolestias, ipsum officiis eveniet vel nisi aliquid repellatsapiente alias iure velit, quia deserunt?",
     "user": {
       "name": "Nicole Nearhood",
-      "img": "/assets/images/profile1.jpg"
+      "img": "../assets/images/profile1.jpg"
     },
     "img": false
   },
@@ -22,7 +22,7 @@
     "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi unde deserunt, dignissimos veniam est minus? Cumquemolestias, ipsum officiis eveniet vel nisi aliquid repellatsapiente alias iure velit, quia deserunt?",
     "user": {
       "name": "Nicole Nearhood",
-      "img": "/assets/images/profile1.jpg"
+      "img": "../assets/images/profile1.jpg"
     }
   },
   {
@@ -30,7 +30,7 @@
     "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi unde deserunt, dignissimos veniam est minus? Cumquemolestias, ipsum officiis eveniet vel nisi aliquid repellatsapiente alias iure velit, quia deserunt?",
     "user": {
       "name": "John Doe",
-      "img": "/assets/images/profile1.jpg"
+      "img": "../assets/images/profile1.jpg"
     },
     "img": false
   },
@@ -39,7 +39,7 @@
     "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi unde deserunt, dignissimos veniam est minus? Cumquemolestias, ipsum officiis eveniet vel nisi aliquid repellatsapiente alias iure velit, quia deserunt?",
     "user": {
       "name": "John Doe",
-      "img": "/assets/images/profile3.jpg"
+      "img": "../assets/images/profile3.jpg"
     },
     "img": false
   },
@@ -48,7 +48,7 @@
     "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi unde deserunt, dignissimos veniam est minus? Cumquemolestias, ipsum officiis eveniet vel nisi aliquid repellatsapiente alias iure velit, quia deserunt?",
     "user": {
       "name": "John Doe",
-      "img": "/assets/images/profile1.jpg"
+      "img": "../assets/images/profile1.jpg"
     },
     "img": false
   }
